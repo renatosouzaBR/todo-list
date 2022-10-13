@@ -2,11 +2,12 @@
   "name": "ignite-react",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "git@github.com:renatosouzaBR/ignite-react.git",
   "license": "MIT",
   "workspaces": {
     "nohoist": [
-      "**"
+      "projects/**"
     ]
   }
 }
