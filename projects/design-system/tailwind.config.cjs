@@ -17,7 +17,7 @@ module.exports = {
       "gray-100": "#F4F4F5",
 
       "cyan-500": "#61DAFB",
-      "cyan-300": "#69DBFA",
+      "cyan-300": "#95E8FF",
     },
     extend: {
       fontFamily: {
