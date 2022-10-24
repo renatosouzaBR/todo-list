@@ -16,6 +16,11 @@ export default {
         type: "inline-radio",
       },
     },
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } as Meta<TextProps>;
 
