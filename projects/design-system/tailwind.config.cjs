@@ -10,14 +10,20 @@ module.exports = {
       "2xl": 32,
     },
     colors: {
-      "gray-900": "#171717",
-      "gray-800": "#1E1E1E",
-      "gray-400": "#52525B",
-      "gray-300": "#A1A1AA",
-      "gray-100": "#F4F4F5",
+      transparent: "transparent",
 
-      "cyan-500": "#61DAFB",
-      "cyan-300": "#95E8FF",
+      gray: {
+        900: "#171717",
+        800: "#1E1E1E",
+        400: "#52525B",
+        300: "#A1A1AA",
+        100: "#F4F4F5",
+      },
+
+      cyan: {
+        500: "#61DAFB",
+        300: "#95E8FF",
+      },
     },
     extend: {
       fontFamily: {
