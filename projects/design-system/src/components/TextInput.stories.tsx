@@ -26,3 +26,9 @@ export default {
 } as Meta<TextInputInputProps>;
 
 export const Default: StoryObj<TextInputInputProps> = {};
+
+export const WithoutIcon: StoryObj<TextInputInputProps> = {
+  args: {
+    children: <TextInput.Input placeholder="Digite seu nome" />,
+  },
+};
