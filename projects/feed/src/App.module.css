@@ -6,4 +6,5 @@
   display: grid;
   grid-template-columns: 16rem 1fr;
   column-gap: 2rem;
+  align-items: flex-start;
 }
