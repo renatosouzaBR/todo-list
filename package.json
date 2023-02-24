@@ -4,10 +4,5 @@
   "main": "index.js",
   "private": true,
   "repository": "git@github.com:renatosouzaBR/ignite-react.git",
-  "license": "MIT",
-  "workspaces": {
-    "nohoist": [
-      "projects/**"
-    ]
-  }
+  "license": "MIT"
 }
