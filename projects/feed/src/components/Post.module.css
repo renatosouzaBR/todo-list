@@ -9,7 +9,7 @@
   margin-top: 2rem;
 }
 
-.post header {
+.post > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@
   outline: 2px solid var(--green-400);
 }
 
-.post header time {
+.post > header time {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--gray-400);
@@ -74,4 +74,60 @@
 
 .postDetails p a:hover {
   color: var(--green-700);
+}
+
+.commentArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid var(--gray-700);
+  padding: 1.5rem 0 0 0;
+  gap: 16px;
+}
+
+.commentArea footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentArea:focus-within footer {
+  visibility: initial;
+  max-height: none;
+}
+
+.commentArea > strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-200);
+  line-height: 1.6;
+}
+
+.commentArea textarea {
+  width: 100%;
+  height: 6rem;
+  border-radius: 8px;
+  background-color: var(--gray-900);
+  padding: 0.875rem 1rem;
+  resize: none;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-300); 
+}
+
+.commentArea textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.commentArea button[type=submit] {
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--green-700);
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
 }
