@@ -15,15 +15,6 @@
   justify-content: space-between;
 }
 
-.post > header img {
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 8px;
-
-  border: 2px solid var(--gray-800);
-  outline: 2px solid var(--green-400);
-}
-
 .post > header time {
   font-size: 0.875rem;
   font-weight: 400;
