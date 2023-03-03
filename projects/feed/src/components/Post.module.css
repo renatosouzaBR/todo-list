@@ -122,3 +122,12 @@
   color: var(--white);
   cursor: pointer;
 }
+
+.commentArea button:not(:disabled):hover {
+  background-color: var(--green-400);
+}
+
+.commentArea button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
