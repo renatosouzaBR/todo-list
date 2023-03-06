@@ -1,12 +1,14 @@
-.todoList {
+.content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: -27px;
   padding: 0 1rem;
 }
 
 .newTaskInputGroup {
-  flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -54,4 +56,49 @@
 
 .newTaskInputGroup > button:hover {
   background-color: var(--blue);
+}
+
+.list {
+  margin-top: 64px;
+  width: 100%;
+  max-width: 736px;
+}
+
+.list > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks {
+  margin-top: 24px;
+  width: 100%;
+  min-height: 244px;
+  max-width: 736px;
+  border-top: 1px solid var(--gray-400);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasks > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.tasks > strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-300);
+  line-height: 1.5rem;
+}
+
+.tasks > span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray-300);
+  line-height: 1.5rem;
 }
