@@ -3,24 +3,32 @@ import { Trash, Check } from 'phosphor-react';
 
 import styles from './Task.module.css';
 
-export function Task() {
-  const [taskChecked, setTaskChecked] = useState(false);
+export interface TaskTypes {
+  id: number;
+  title: string;
+  completed: boolean;
+}
 
-  function handleCheckUncheckTask() {
-    setTaskChecked(value => !value);
-  }
+export interface TaskProps {
+  task: TaskTypes;
+  onCheckTask: () => void;
+  onRemoveTask: () => void;
+}
+
+export function Task({ task, onCheckTask, onRemoveTask }: TaskProps) {
+  const { title, completed, } = task;
 
   return (
     <div className={styles.task}>
-      <button className={`${styles.checkbox} ${taskChecked && styles.checkboxChecked}`} onClick={handleCheckUncheckTask}>
-        {taskChecked && <Check size={12} weight="bold" />}
+      <button className={`${styles.checkbox} ${completed && styles.checkboxChecked}`} onClick={onCheckTask}>
+        {completed && <Check size={12} weight="bold" />}
       </button>
 
-      <span className={`${styles.taskSpan} ${taskChecked && styles.spanChecked}`}>
-        Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
+      <span className={`${styles.taskSpan} ${completed && styles.spanChecked}`}>
+        {title}
       </span>
 
-      <button className={styles.deleteButton}>
+      <button className={styles.deleteButton} onClick={onRemoveTask}>
         <Trash />
       </button>
     </div>

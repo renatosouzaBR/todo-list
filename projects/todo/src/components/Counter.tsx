@@ -2,14 +2,15 @@ import styles from './Counter.module.css';
 
 interface CounterProps {
   title: string;
+  count: number;
   secundary?: boolean;
 }
 
-export function Counter({ title, secundary }: CounterProps) {
+export function Counter({ title, count, secundary }: CounterProps) {
   return (
     <strong className={!secundary ? styles.counter : `${styles.counter} ${styles.counterSecundary}`}>
       {title}
-      <span>0</span>
+      <span>{count}</span>
     </strong>
   );
 }
