@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
 
 import { Counter } from "./components/Counter";
+import { Task } from "./components/Task";
 
 import addSvg from './assets/add.svg';
 import clipboardSvg from './assets/clipboard.svg';
@@ -34,6 +35,10 @@ export function App() {
             <strong>Você ainda não tem tarefas cadastradas</strong>
             <span>Crie tarefas e organize seus itens a fazer</span>
           </div>
+
+          <Task />
+          <Task />
+          <Task />
         </section>
       </div>        
     </main>
