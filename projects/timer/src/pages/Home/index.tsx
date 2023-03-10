@@ -1,32 +1,60 @@
+import { Play } from 'phosphor-react'
+
 import {
   CountdownContainer,
   FormContainer,
   HomeContainer,
+  MinutesAmountInput,
+  ProjectNameInput,
   Separator,
+  StartCountdownButton,
 } from './styles'
 
 export function Home() {
   return (
     <HomeContainer>
-      <FormContainer>
-        <label htmlFor="projectName">Vou trabalhar em</label>
-        <input id="projectName" placeholder="Dê um nome para o seu projeto" />
+      <form action="">
+        <FormContainer>
+          <label htmlFor="projectName">Vou trabalhar em</label>
+          <ProjectNameInput
+            id="projectName"
+            placeholder="Dê um nome para o seu projeto"
+            list="tasks-suggestions"
+          />
 
-        <label htmlFor="minutesAmount">durante</label>
-        <input type="number" id="minutesAmount" placeholder="00" />
+          <datalist id="tasks-suggestions">
+            <option value="Banana">Banana</option>
+            <option value="Maça">Maça</option>
+            <option value="Abacaxi">Abacaxi</option>
+            <option value="Uva">Uva</option>
+          </datalist>
 
-        <span>minutos.</span>
-      </FormContainer>
+          <label htmlFor="minutesAmount">durante</label>
+          <MinutesAmountInput
+            type="number"
+            id="minutesAmount"
+            placeholder="00"
+            step={5}
+            min={5}
+            max={60}
+          />
 
-      <CountdownContainer>
-        <span>0</span>
-        <span>0</span>
-        <Separator>:</Separator>
-        <span>0</span>
-        <span>0</span>
-      </CountdownContainer>
+          <span>minutos.</span>
+        </FormContainer>
 
-      <button type="submit">Começar</button>
+        <CountdownContainer>
+          <span>0</span>
+          <span>0</span>
+          <Separator>:</Separator>
+          <span>0</span>
+          <span>0</span>
+        </CountdownContainer>
+
+        <StartCountdownButton disabled type="submit">
+          <Play size={24} />
+          Começar
+        </StartCountdownButton>
+      </form>
     </HomeContainer>
   )
 }
