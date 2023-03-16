@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 
+import { Home } from './pages/Home'
 import { DefaultTheme } from './styles/DefaultTheme'
 import { GlobalStyle } from './styles/GlobalStyle'
 
@@ -8,7 +9,7 @@ export function App() {
     <ThemeProvider theme={DefaultTheme}>
       <GlobalStyle />
 
-      <h1>Coffee Delivery</h1>
+      <Home />
     </ThemeProvider>
   )
 }
