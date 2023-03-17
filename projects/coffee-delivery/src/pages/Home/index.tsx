@@ -1,9 +1,27 @@
-import { Coffee, MapPin, Package, ShoppingCart, Timer } from 'phosphor-react'
+import {
+  Coffee,
+  MapPin,
+  Minus,
+  Package,
+  Plus,
+  ShoppingCart,
+  Timer,
+} from 'phosphor-react'
 
 import logoImage from '@/assets/logo.svg'
 import coffeeBannerImage from '@/assets/coffee-banner.svg'
+import coffee1Image from '@/assets/coffee-1.svg'
 
-import { HomeContainer, WelcomeContainer } from './styles'
+import {
+  CoffeeCard,
+  CoffeeDescriptions,
+  CoffeeImageContainer,
+  CoffeesContainer,
+  HomeContainer,
+  WelcomeContainer,
+} from './styles'
+
+const COFFEE_DATA = new Array(14).fill(new Date().getTime())
 
 export function Home() {
   return (
@@ -65,6 +83,42 @@ export function Home() {
 
         <img src={coffeeBannerImage} alt="" />
       </WelcomeContainer>
+
+      <CoffeesContainer>
+        <h2>Nossos cafés</h2>
+
+        <div>
+          {COFFEE_DATA.map((coffee) => (
+            <CoffeeCard key={coffee}>
+              <CoffeeImageContainer>
+                <img src={coffee1Image} alt="" />
+                <span>Tradicional</span>
+              </CoffeeImageContainer>
+
+              <CoffeeDescriptions>
+                <h4>Expresso Tradicional</h4>
+                <span>
+                  O tradicional café feito com água quente e grãos moídos
+                </span>
+              </CoffeeDescriptions>
+
+              <footer>
+                <strong>9,90</strong>
+
+                <span>
+                  <Minus size={14} weight="bold" />
+                  1
+                  <Plus size={14} weight="bold" />
+                </span>
+
+                <button>
+                  <ShoppingCart size={22} weight="fill" />
+                </button>
+              </footer>
+            </CoffeeCard>
+          ))}
+        </div>
+      </CoffeesContainer>
     </HomeContainer>
   )
 }
