@@ -1,16 +1,8 @@
-import {
-  Coffee,
-  MapPin,
-  Minus,
-  Package,
-  Plus,
-  ShoppingCart,
-  Timer,
-} from 'phosphor-react'
+import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 
-import logoImage from '@/assets/logo.svg'
 import coffeeBannerImage from '@/assets/coffee-banner.svg'
 import coffee1Image from '@/assets/coffee-1.svg'
+import { CounterInput } from '@/components/CounterInput'
 
 import {
   CoffeeCard,
@@ -26,22 +18,6 @@ const COFFEE_DATA = new Array(14).fill(new Date().getTime())
 export function Home() {
   return (
     <HomeContainer>
-      <header>
-        <img src={logoImage} alt="" />
-
-        <div>
-          <span>
-            <MapPin size={22} weight="fill" />
-            Porto Alegre, RS
-          </span>
-
-          <button>
-            <ShoppingCart size={22} weight="fill" />
-            <span>3</span>
-          </button>
-        </div>
-      </header>
-
       <WelcomeContainer>
         <div>
           <h1>Encontre o café perfeito para qualquer hora do dia</h1>
@@ -104,13 +80,7 @@ export function Home() {
 
               <footer>
                 <strong>9,90</strong>
-
-                <span>
-                  <Minus size={14} weight="bold" />
-                  1
-                  <Plus size={14} weight="bold" />
-                </span>
-
+                <CounterInput />
                 <button>
                   <ShoppingCart size={22} weight="fill" />
                 </button>
